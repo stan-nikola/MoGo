@@ -52,7 +52,7 @@ hr{
 .intro{
     
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     
     width: 100%;
@@ -65,14 +65,14 @@ hr{
 .intro-inner{
     color: #fff;
     width: 100%;
-    max-width: 500px;
+    max-width: 880px;
     margin: 0 auto;
     text-align: center;
     
 }
 
 .intro-title{
-    font-size: 80px;
+    font-size: 150px;
     line-height: 1;
     font-weight: 700;
     text-transform: uppercase;
@@ -91,9 +91,9 @@ hr{
 }
 
 .intro-suptitle{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-family: 'Kaushan Script', cursive;
-    font-size: 30px;
+    font-size: 70px;
     font-weight: 400;
        
     color: #fff;
@@ -246,7 +246,7 @@ color: black;
 
 /* Section */
 .section{
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .section--devices{ 
@@ -299,9 +299,14 @@ color: black;
 }
 .card-item{
     width: 380px;
+    
+    
+   
+}
+.card-inner{
     background-color: #95e1d3;
     position: relative;
-   
+
 }
 .card-item:hover .card-img{
     transform: translate3d(-10px, -10px, 0);
@@ -337,6 +342,28 @@ color: black;
     transform: translate3d(0,-50%, 0);
     opacity: 0;
     transition: opacity .2s linear;
+}
+
+.card-info {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.card-name {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #333333;
+    margin-bottom: 5px;
+
+}
+
+.card-prof {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    color: #999999;
 }
 
 /* Statistics */
@@ -590,5 +617,11 @@ color: black;
 .social-item:hover{
     background-color: #f38181;
     color: #fff;
+}
+
+/* Logos */
+.logos{
+    display: flex;
+    justify-content: space-between;
 }
 
