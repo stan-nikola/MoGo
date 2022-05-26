@@ -249,6 +249,7 @@ color: black;
     padding: 60px 0;
 }
 
+
 .section--devices{ 
     padding-bottom: 0;
     background:
@@ -259,6 +260,10 @@ color: black;
 }
 .section--gray{
     background-color: #f8f8f8;
+}
+.section--clients{
+    background: #f0f0f0 
+    url(../images/layer53.jpg) center no-repeat ;
 }
 
 .section-header{
@@ -536,6 +541,7 @@ color: black;
 }
 .reviews-photo{
     border: 3px solid #95e1d3;
+    border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
@@ -623,5 +629,111 @@ color: black;
 .logos{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
+/* works */
+.works{
+    display: flex;
+}
+.works-column{
+    flex: 1 1 0;
+}
+.works-item{
+    position: relative;
+    background:
+     linear-gradient(to bottom,
+                #f38181, #fbe389);
+
+}
+.works-item:hover .works-img{
+    opacity: .1;
+}
+.works-item:hover .works-info {
+    opacity: 1;
+}
+.works-img{
+    max-width: 100%;
+    height: auto;
+    transition: opacity .2s linear;
+    display: block;
+}
+.works-info{
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translate3d(0,-50%,0);
+    padding: 0 15px;
+    opacity: 0;
+    transition: opacity .2s linear ;
+}
+
+.workst-title{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+}
+.workst-text{
+    font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 300;
+        
+}
+
+/* clients */
+.clients{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+.clients-item{
+    width: 50%;
+    padding: 0 45px 0 175px;
+    position: relative;
+    margin-bottom: 60px; 
+}
+.clients-photo{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    z-index: 1;
+}
+.client-name{
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.client-prof{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    color: #333;
+}
+.client-text{
+    color: #999999;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.client-text:before{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 15px 0;
+
+
+
+}
