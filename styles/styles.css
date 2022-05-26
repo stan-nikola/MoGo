@@ -979,6 +979,7 @@ color: black;
 .instagram-item{
     width: 32%;
     flex: 1 1 0;
+    text-decoration: none;
     
     border-bottom: 1px solid #fff;
     border-left: 1px solid #fff;
