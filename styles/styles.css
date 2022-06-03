@@ -113,6 +113,20 @@ hr{
     right: 0;
     z-index: 1000;
 }
+
+.header.fixed{
+    background-color: #e98583;
+    position: fixed;
+    right: 0; 
+    left: 0;
+    transform: translate3d(0,0,0);
+   
+    box-shadow: 0 3px 10px rgb(0,0,0, .2);
+    
+}
+.header.active{
+    background: #e98583;
+}
 .header-iner{
     display: flex;
     justify-content: space-between; /*header-logo и nav размещает по сторонам*/
@@ -137,6 +151,60 @@ hr{
     font-style: 14px;
     text-transform: uppercase;
    }
+
+   .nav-toggle{
+       padding: 10px 0;
+       width:24px;
+       position: absolute;
+       top: 24px;
+       right: 30px;
+       z-index: 1;
+       font-style: 0;
+       color: transparent;
+       border: 0;
+       background: none;
+       cursor: pointer;
+       display: none;
+
+   }
+   .nav-toggle-item{
+       display: block;
+       width: 100%;
+       height: 3px;
+       background-color: #fff;
+       position: absolute;
+       top: 0;
+       right: 0;
+       left: 0;
+       bottom: 0;
+       margin: auto;
+       transition: background .2s linear;
+       
+   }
+   .nav-toggle.active .nav-toggle-item{
+       background: none;
+
+   }
+ 
+
+   .nav-toggle-item::before,
+   .nav-toggle-item::after{
+       content: "" ;
+       width: 100%;
+       height: 3px;
+       background-color: #fff;
+       position: absolute;
+       left: 0;
+       z-index: 1;
+       transition: transform .2s linear;
+
+   }
+    .nav-toggle-item::before{
+        top: -8px;
+          }
+    .nav-toggle-item::after{
+        bottom: -8px;
+          }
 
 .nav-linc{
     display:inline-block;
@@ -174,6 +242,14 @@ hr{
 .nav-linc.active {
 color: #fce38a;
 }
+.nav-toggle.active .nav-toggle-item::before{
+    transform-origin: left top;
+    transform: rotate(45deg) translateX(.5px);
+    }
+.nav-toggle.active .nav-toggle-item::after{
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translateX(-0.5px);
+    }
 
 /* Button */
 .btn{
@@ -1210,10 +1286,17 @@ color: black;
     }   
 }
 @media (max-width: 770px) {
+   
+   
     /* intro */
     .intro {
             min-height: 650px;
         }
+    /* Header */
+    .header{
+        padding: 10px 0;
+    }
+   
     /* section */
     .section{
     padding: 40px 0;
@@ -1224,6 +1307,19 @@ color: black;
     /* nav */
     .nav{
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #e98583;
+        width: 100%;
+    }
+    .nav-linc{
+        display: block;
+        margin: 0;
+        padding: 10px 20px;
+    }
+    .nav-toggle{
+        display: block;
     }
     /* card */
     .card{
@@ -1407,6 +1503,10 @@ color: black;
            flex-wrap: wrap;
            min-width: none;
        }
+      
+      .fa-brands{
+          font-size:  30px;
+      }
         .subscribe-input{
             margin-bottom: 10px;
             border-right: 1px solid #e7e7e7;
